@@ -1,4 +1,6 @@
-const Home = {
+import type { Template } from "@strifeapp/types";
+
+const Homes: Template = {
   name: 'Homes',
   displayName: 'Home',
   collection: 'Homes',
@@ -31,4 +33,4 @@ const Home = {
   filteredFields: [],
 }
 
-export default Home;
+export default Homes;

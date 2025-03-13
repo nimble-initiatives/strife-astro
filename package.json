@@ -20,7 +20,7 @@
     "typescript": "^5.8.2"
   },
   "devDependencies": {
-    "@strifeapp/types": "^0.0.1",
+    "@strifeapp/types": "^0.0.2",
     "@vitejs/plugin-basic-ssl": "^2.0.0"
   }
 }
