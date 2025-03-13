@@ -1,0 +1,25 @@
+{
+  "name": "strife-astro",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/svelte": "^7.0.6",
+    "@strifeapp/astro": "^1.0.7",
+    "@strifeapp/strife": "^0.5.0-alpha",
+    "@tailwindcss/vite": "^4.0.13",
+    "astro": "^5.4.3",
+    "ravendb": "^6.0.0",
+    "svelte": "^5.23.0",
+    "tailwindcss": "^4.0.13",
+    "typescript": "^5.8.2"
+  },
+  "devDependencies": {
+    "@strifeapp/types": "^0.0.1"
+  }
+}

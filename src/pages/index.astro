@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Sections from '../components/Sections.svelte';
+import { store } from 'strife:store';
+import type { IDocumentSession } from 'ravendb';
+import type { Home } from '../types/Home';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+
+const session: IDocumentSession = store.openSession();
+
+const home = await session
+  .query<Home>({ indexName: 'Content/ByUrl' })
+  .whereEquals('url', '/')
+  .singleOrNull();
+---
+
+<Layout>
+  <Sections sections={home?.sections} client:load />
+</Layout>
