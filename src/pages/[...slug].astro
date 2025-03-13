@@ -1,0 +1,12 @@
+---
+import NotFound from "./404.astro"
+import Article from "./Article.astro";
+
+const Map: { [key: string]: (_props: Record<string, any>) => any } = {
+  Articles: Article,
+};
+
+const Component = Map[Astro.locals.pageData?.collection ?? "NotFound"];
+---
+
+<Component />
