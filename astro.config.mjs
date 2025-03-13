@@ -8,20 +8,14 @@ import tailwindcss from '@tailwindcss/vite';
 
 import svelte from '@astrojs/svelte';
 
-const { PROD } = import.meta.env;
-
-import Home from './src/collections/Home';
 // https://astro.build/config
 export default defineConfig({
-  integrations: [strife({ collections: [Home] }), svelte()],
+  integrations: [strife(), svelte()],
   server: {
     port: 4322,
   },
   vite: {
-    plugins: [tailwindcss(), basicSsl()],
-    server: {
-      https: true,
-    },
+    plugins: [tailwindcss()],
     ssr: {
       noExternal: ["@strifeapp/strife"],
     },
